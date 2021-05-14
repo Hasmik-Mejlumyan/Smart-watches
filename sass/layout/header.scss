@@ -1,0 +1,26 @@
+header {
+    min-height: 100vh;
+    background: url(../../img/head.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    .header-title {
+        @include header-title;
+        font-size: 80px;
+        @media (max-width: 992px) {
+            font-size: 50px;
+        }
+    }
+    .header-subtitle {
+        @include header-title;
+        font-size: 25px;
+        line-height: 40px;
+        @media (max-width: 992px) {
+            font-size: 20px;
+            line-height: 25px;
+        }
+    }
+}

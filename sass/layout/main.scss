@@ -1,0 +1,299 @@
+.watches {
+    background-color: $bg-ligth;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .container {
+        @include flex-row;
+        .watches-selling {
+            @include flex-column(start);
+            h2 {
+                @include subtitle;
+            }
+            p {
+                @include subtitle-txt
+            }
+            button {
+                @include btn-dark
+            }
+        }
+        .watches-img-block {
+            width: 480px;
+            height: 480px;
+            img {
+                width: 100%;
+                object-fit: contain;
+            }
+            @media (max-width: 992px) {
+                width: 400px;
+                height: 400px;
+            }
+            @media (max-width: 576px) {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+}
+
+.info {
+    background-color: rgb(40, 55, 105);
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            @include subtitle;
+            color: $white-txt;
+            text-align: center;
+            padding: 0 50px;
+            max-width: 600px;
+        }
+        .info-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .info-container-content {
+                .info-container-content-item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    transition: .2s all linear;
+                    &:hover {
+                        transform: translateY(-10px);
+                    }
+                    .info-container-content-ok-element {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img {
+                            width: 40px;
+                            height: 40px;
+                            margin-right: 10px;
+                        }
+                        .info-container-content-ok-element-txt {
+                            @include subtitle-txt;
+                            font-weight: 800;
+                            color: $white-txt;
+                        }
+                    }
+                    .info-container-content-item-txt {
+                        @include subtitle-txt;
+                        color: $white-txt;
+                        margin-left: 50px;
+                    }
+                    @media (max-width: 992px){
+                        padding: 0 20px;
+                    }
+                }
+                .info-container-content-img {
+                    width: 250px;
+                    object-fit: contain;
+                    margin: 0 60px;
+                    transition: .2s all linear;
+                    &:hover {
+                        transform: translateY(-10px);
+                    }
+                }
+            }
+            @media (max-width: 992px){
+                .info-container-content-img-block {
+                    display: none;
+                }
+            }
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+.fitness {
+    min-height: 100vh;
+    background: url(../../img/fitness.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .fitness-block {
+        @include flex-column(start);
+        h2 {
+            @include subtitle;
+            color: $white-txt;
+        }
+        p {
+            @include subtitle-txt;
+            color: $white-txt;
+        }
+        button {
+            @include btn-light
+        }
+    }
+}
+
+.get-better {
+    min-height: 100vh;
+    background: url(../../img/get-better.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .get-better-block {
+            @include flex-column(end);
+            align-items: flex-end;
+            h2 {
+                @include subtitle;
+                color: $white-txt;
+            }
+            p {
+                @include subtitle-txt;
+                color: $white-txt;
+            }
+            button {
+                @include btn-light;
+            }
+        }
+    }
+}
+
+.all-in-one {
+    background-color: $bg-ligth;
+    .all-in-one-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2 {
+            @include subtitle;
+            color: $black-txt;
+            text-align: center;
+            padding: 0 50px;
+            max-width: 600px;
+        }
+        .all-in-one-container-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .all-in-one-container-content-img-block {
+                width: 500px;
+                height: 500px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-right: 20px;
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                }
+                @media (max-width: 992px) {
+                    width: 400px;
+                    height: 400px;
+                }
+                @media (max-width: 768px) {
+                    padding-right: 0;
+                }
+                @media (max-width: 576px) {
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+            .all-in-one-container-content-txt-block {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                .all-in-one-container-content-ok-block {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        margin-right: 10px;
+                    }
+                    .all-in-one-container-content-ok-block-txt {
+                        @include subtitle-txt;
+                        font-weight: 800;
+                        color: $black-txt;
+                    }
+                }
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+                .all-in-one-container-content-txt {
+                    @include subtitle-txt;
+                    color: $black-txt;
+                    margin-left: 50px;
+                }
+            }
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+.sports {
+    min-height: 100vh;
+    background: url(../../img/sport.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .sport-block {
+        @include flex-column(start);
+        h2 {
+            @include subtitle;
+            color: $white-txt;
+        }
+        p {
+            @include subtitle-txt;
+            color: $white-txt;
+        }
+        button {
+            @include btn-light
+        }
+    }
+}
+
+.record {
+    min-height: 100vh;
+    background: url(../../img/record.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .record-block {
+            @include flex-column(end);
+            align-items: flex-end;
+            h2 {
+                @include subtitle;
+                color: $white-txt;
+            }
+            p {
+                @include subtitle-txt;
+                color: $white-txt;
+            }
+            button {
+                @include btn-light;
+            }
+        }
+    }
+}

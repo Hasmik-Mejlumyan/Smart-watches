@@ -1,0 +1,68 @@
+@mixin header-title {
+    text-align: center;
+    color: $white-txt;
+    margin: 20px 40px;
+    letter-spacing: 4px;   
+}
+
+@mixin flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 768px) {
+       flex-direction: column;
+    }
+}
+
+@mixin flex-column ($text-align) {
+    text-align: $text-align;
+    color: $black-txt;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+@mixin subtitle {
+    font-size: 40px;
+    font-weight: 500;
+    font-family: sans-serif;
+    letter-spacing: 4px;
+    margin: 20px 0;
+}
+
+@mixin subtitle-txt {
+    font-size: 18px;
+    font-family: 'Arial Narrow', sans-serif;
+    letter-spacing: 2px;
+    margin: 20px 0;
+}
+
+@mixin btn-dark {
+    width: 150px;
+    min-height: 40px;
+    border: 2px solid $black-txt;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 20px 0;
+    transition: .2s all linear;
+    &:hover {
+        background-color: $black-txt;
+        color: $white-txt;
+    }
+}
+
+@mixin btn-light {
+    width: 150px;
+    min-height: 40px;
+    border: 2px solid $white-txt;
+    background-color: rgba(255, 255, 255, 0);
+    color: $white-txt;
+    margin: 20px 0;
+    transition: .2s all linear;
+    &:hover {
+        background-color: $white-txt;
+        color: $black-txt;
+    }
+}
