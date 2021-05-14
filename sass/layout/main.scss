@@ -233,6 +233,10 @@
                     @include subtitle-txt;
                     color: $black-txt;
                     margin-left: 50px;
+                    transition: .2s all linear;
+                    &:hover {
+                        transform: translateY(-10px);
+                    }
                 }
             }
             @media (max-width: 768px) {

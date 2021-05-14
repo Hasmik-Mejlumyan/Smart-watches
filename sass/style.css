@@ -414,6 +414,10 @@ header .header-subtitle {
   margin: 20px 0;
   color: #2c2c2c;
   margin-left: 50px;
+  transition: 0.2s all linear;
+}
+.all-in-one .all-in-one-container .all-in-one-container-content .all-in-one-container-content-txt-block .all-in-one-container-content-txt:hover {
+  transform: translateY(-10px);
 }
 @media (max-width: 768px) {
   .all-in-one .all-in-one-container .all-in-one-container-content {
